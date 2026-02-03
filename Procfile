@@ -1,0 +1,1 @@
+web: ./target/release/mnj_stok

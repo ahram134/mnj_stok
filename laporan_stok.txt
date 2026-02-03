@@ -1,0 +1,7 @@
+--- LAPORAN STOK CV BUS ---
+
+1. Helm Proyek Putih | 50 unit
+2. Rompi Safety Orange | 120 unit
+3. Safety Shoes | 100 unit
+4. Traffic Cone | 20 unit
+5. Speed Bump | 5 unit
