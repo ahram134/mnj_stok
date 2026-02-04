@@ -1,0 +1,17 @@
+# Tahap 1: Build aplikasi
+FROM rust:1.75 as builder
+WORKDIR /app
+COPY . .
+RUN cargo build --release
+
+# Tahap 2: Jalankan aplikasi
+FROM debian:bookworm-slim
+WORKDIR /app
+COPY --from=builder /app/target/release/mnj_stok .
+# Pastikan file gudang.json awal ikut terbawa jika diperlukan
+COPY --from=builder /app/gudang.json . 
+
+ENV PORT=8080
+EXPOSE 8080
+
+CMD ["./mnj_stok"]
